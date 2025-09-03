@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 // List of allowed IPs
-const ALLOWED_IPS = ["123.123.123.123", "188.245.77.11"]; // Replace with your IPs
+const ALLOWED_IPS = ["123.123.123.123", "188.245.77.11" , "::ffff:188.245.77.11"]; // Replace with your IPs
 
 export function middleware(req: NextRequest) {
   const ip =
