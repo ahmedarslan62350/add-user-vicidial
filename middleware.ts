@@ -6,7 +6,7 @@ const ALLOWED_IPS = ["123.123.123.123", "188.245.77.11"]; // Replace with your I
 
 export function middleware(req: NextRequest) {
   const ip =
-    req.ip || req.headers.get("x-forwarded-for")?.split(",")[0] || req.ip;
+    req.headers.get("x-forwarded-for")?.split(",")[0];
 
   if (!ip || !ALLOWED_IPS.includes(ip)) {
     // Deny access
